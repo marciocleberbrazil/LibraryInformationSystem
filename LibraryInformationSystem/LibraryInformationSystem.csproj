@@ -148,13 +148,27 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\AccessesController.cs" />
+    <Compile Include="Controllers\AuthorsController.cs" />
+    <Compile Include="Controllers\BooksController.cs" />
+    <Compile Include="Controllers\BorrowersController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\LocationsController.cs" />
+    <Compile Include="Controllers\PublishersController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Migrations\201805021100259_CreateDatabase.cs" />
     <Compile Include="Migrations\201805021100259_CreateDatabase.Designer.cs">
       <DependentUpon>201805021100259_CreateDatabase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201805021252536_ChangeBorrowerClass.cs" />
+    <Compile Include="Migrations\201805021252536_ChangeBorrowerClass.Designer.cs">
+      <DependentUpon>201805021252536_ChangeBorrowerClass.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201805021303002_ChangeBookRelationship.cs" />
+    <Compile Include="Migrations\201805021303002_ChangeBookRelationship.Designer.cs">
+      <DependentUpon>201805021303002_ChangeBookRelationship.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Access.cs" />
@@ -167,10 +181,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Data\LibraryInformationSystem.mdf" />
-    <Content Include="App_Data\LibraryInformationSystem_log.ldf">
-      <DependentUpon>LibraryInformationSystem.mdf</DependentUpon>
-    </Content>
     <Content Include="Assets\css\main.css" />
     <Content Include="Assets\css\bootstrap.min.css" />
     <Content Include="favicon.ico" />
@@ -208,11 +218,50 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+    <Content Include="Views\Authors\Create.cshtml" />
+    <Content Include="Views\Authors\Delete.cshtml" />
+    <Content Include="Views\Authors\Details.cshtml" />
+    <Content Include="Views\Authors\Edit.cshtml" />
+    <Content Include="Views\Authors\Index.cshtml" />
+    <Content Include="Views\Locations\Create.cshtml" />
+    <Content Include="Views\Locations\Delete.cshtml" />
+    <Content Include="Views\Locations\Details.cshtml" />
+    <Content Include="Views\Locations\Edit.cshtml" />
+    <Content Include="Views\Locations\Index.cshtml" />
+    <Content Include="Views\Publishers\Create.cshtml" />
+    <Content Include="Views\Publishers\Delete.cshtml" />
+    <Content Include="Views\Publishers\Details.cshtml" />
+    <Content Include="Views\Publishers\Edit.cshtml" />
+    <Content Include="Views\Publishers\Index.cshtml" />
+    <Content Include="Views\Borrowers\Create.cshtml" />
+    <Content Include="Views\Borrowers\Delete.cshtml" />
+    <Content Include="Views\Borrowers\Details.cshtml" />
+    <Content Include="Views\Borrowers\Edit.cshtml" />
+    <Content Include="Views\Borrowers\Index.cshtml" />
+    <Content Include="Views\Accesses\Create.cshtml" />
+    <Content Include="Views\Accesses\Delete.cshtml" />
+    <Content Include="Views\Accesses\Details.cshtml" />
+    <Content Include="Views\Accesses\Edit.cshtml" />
+    <Content Include="Views\Accesses\Index.cshtml" />
+    <Content Include="Views\Books\Create.cshtml" />
+    <Content Include="Views\Books\Delete.cshtml" />
+    <Content Include="Views\Books\Details.cshtml" />
+    <Content Include="Views\Books\Edit.cshtml" />
+    <Content Include="Views\Books\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201805021100259_CreateDatabase.resx">
       <DependentUpon>201805021100259_CreateDatabase.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805021252536_ChangeBorrowerClass.resx">
+      <DependentUpon>201805021252536_ChangeBorrowerClass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805021303002_ChangeBookRelationship.resx">
+      <DependentUpon>201805021303002_ChangeBookRelationship.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

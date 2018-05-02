@@ -12,7 +12,7 @@ namespace LibraryInformationSystem.Models
         public string LastName { get; set; }
         public string Address { get; set; }
         public string Address2 { get; set; }
-        public int LocationId { get; set; }
+        public string LocationId { get; set; }
         public virtual Location Location { get; set; }
     }
 }

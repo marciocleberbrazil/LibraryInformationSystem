@@ -9,12 +9,6 @@ namespace LibraryInformationSystem.Models
     {
         public int PublisherId { get; set; }
         public string Name { get; set; }
-
-        public virtual ICollection<Book> Books { get; set; }
-
-        public Publisher()
-        {
-            this.Books = new HashSet<Book>();
-        }
+        public virtual List<Book> Books { get; set; }
     }
 }

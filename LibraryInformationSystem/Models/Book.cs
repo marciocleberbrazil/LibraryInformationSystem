@@ -13,13 +13,11 @@ namespace LibraryInformationSystem.Models
         public DateTime Published { get; set; }
         public Decimal PurchasePrice { get; set; }
         public Decimal CurrentPrice { get; set; }
-        public virtual ICollection<Author> Authors { get; set; }
-        public virtual ICollection<Publisher> Publishers { get; set; }
 
-        public Book()
-        {
-            this.Authors = new HashSet<Author>();
-            this.Publishers = new HashSet<Publisher>();
-        }
+        public int AuthorId { get; set; }
+        public virtual Author Author { get; set; }
+
+        public int PublisherId { get; set; }
+        public virtual Publisher Publisher { get; set; }
     }
 }
