@@ -38,7 +38,7 @@ namespace LibraryInformationSystem.Controllers
         // GET: Borrowers/Create
         public ActionResult Create()
         {
-            ViewBag.Locations = db.Locations.ToList();
+            ViewBag.LocationId = new SelectList(db.Locations, "LocationId", "Name");
             return View();
         }
 
@@ -49,15 +49,13 @@ namespace LibraryInformationSystem.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Create([Bind(Include = "BorrowerId,FirstName,LastName,Address,Address2,LocationId")] Borrower borrower)
         {
-            ViewBag.Locations = db.Locations.ToList();
-
             if (ModelState.IsValid)
             {
                 db.Borrowers.Add(borrower);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-
+            ViewBag.LocationId = new SelectList(db.Locations, "LocationId", "Name", borrower.LocationId);
             return View(borrower);
         }
 
@@ -74,8 +72,7 @@ namespace LibraryInformationSystem.Controllers
                 return HttpNotFound();
             }
 
-            ViewBag.Locations = db.Locations.ToList();
-
+            ViewBag.LocationId = new SelectList(db.Locations, "LocationId", "Name", borrower.LocationId);
             return View(borrower);
         }
 

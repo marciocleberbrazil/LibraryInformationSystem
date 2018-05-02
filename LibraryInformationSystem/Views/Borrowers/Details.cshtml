@@ -1,15 +1,13 @@
 ﻿@model LibraryInformationSystem.Models.Borrower
 
 @{
-    ViewBag.Title = "Details";
-    Layout = "~/Views/Shared/_Layout.cshtml";
+    Layout = "~/Views/Borrowers/_LayoutBorrower.cshtml";
 }
 
-<h2>Details</h2>
+<h3>Details</h3>
+<hr />
 
 <div>
-    <h4>Borrower</h4>
-    <hr />
     <dl class="dl-horizontal">
         <dt>
             @Html.DisplayNameFor(model => model.FirstName)
@@ -44,7 +42,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.LocationId)
+            @Html.DisplayNameFor(model => model.Location.Name)
         </dt>
 
         <dd>

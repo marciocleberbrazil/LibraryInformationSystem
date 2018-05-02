@@ -1,12 +1,8 @@
 ﻿@model IEnumerable<LibraryInformationSystem.Models.Borrower>
 
 @{
-    ViewBag.Title = "Index";
-    Layout = "~/Views/Shared/_Layout.cshtml";
+    Layout = "~/Views/Borrowers/_LayoutBorrower.cshtml";
 }
-
-<h2>Index</h2>
-
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
@@ -25,7 +21,7 @@
             @Html.DisplayNameFor(model => model.Address2)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.LocationId)
+            @Html.DisplayNameFor(model => model.Location.Name)
         </th>
         <th></th>
     </tr>

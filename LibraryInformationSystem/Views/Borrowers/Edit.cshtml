@@ -1,20 +1,18 @@
 ﻿@model LibraryInformationSystem.Models.Borrower
 
 @{
-    ViewBag.Title = "Edit";
-    Layout = "~/Views/Shared/_Layout.cshtml";
+    Layout = "~/Views/Borrowers/_LayoutBorrower.cshtml";
 }
 
-<h2>Edit</h2>
+<h3>Edit this borrower</h3>
+<hr />
 
 
 @using (Html.BeginForm())
 {
     @Html.AntiForgeryToken()
-    
+
     <div class="form-horizontal">
-        <h4>Borrower</h4>
-        <hr />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
         @Html.HiddenFor(model => model.BorrowerId)
 
@@ -51,9 +49,9 @@
         </div>
 
         <div class="form-group">
-            <label class="control-label col-md-2">Location</label>
+            @Html.LabelFor(model => model.LocationId, "Location", htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.DropDownListFor(model => model.LocationId, new SelectList(ViewBag.Locations, "LocationId", "Name"), new { htmlAttributes = new { @class = "form-control" } })
+                @Html.DropDownList("LocationId", null, "Select", htmlAttributes: new { @class = "form-control" })
                 @Html.ValidationMessageFor(model => model.LocationId, "", new { @class = "text-danger" })
             </div>
         </div>
