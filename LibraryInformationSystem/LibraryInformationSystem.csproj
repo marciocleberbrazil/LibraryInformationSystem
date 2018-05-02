@@ -203,9 +203,6 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Home\About.cshtml" />
-    <Content Include="Views\Home\Contact.cshtml" />
-    <Content Include="Views\Home\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -238,16 +235,17 @@
     <Content Include="Views\Borrowers\Details.cshtml" />
     <Content Include="Views\Borrowers\Edit.cshtml" />
     <Content Include="Views\Borrowers\Index.cshtml" />
-    <Content Include="Views\Accesses\Create.cshtml" />
-    <Content Include="Views\Accesses\Delete.cshtml" />
-    <Content Include="Views\Accesses\Details.cshtml" />
-    <Content Include="Views\Accesses\Edit.cshtml" />
-    <Content Include="Views\Accesses\Index.cshtml" />
+    <Content Include="Views\Home\Create.cshtml" />
+    <Content Include="Views\Home\Delete.cshtml" />
+    <Content Include="Views\Home\Details.cshtml" />
+    <Content Include="Views\Home\Edit.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Books\Create.cshtml" />
     <Content Include="Views\Books\Delete.cshtml" />
     <Content Include="Views\Books\Details.cshtml" />
     <Content Include="Views\Books\Edit.cshtml" />
     <Content Include="Views\Books\Index.cshtml" />
+    <Content Include="Views\Home\_LayoutHome.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201805021100259_CreateDatabase.resx">
