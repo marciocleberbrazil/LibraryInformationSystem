@@ -8,6 +8,7 @@ namespace LibraryInformationSystem.Models
 {
     public class Location
     {
+        [DisplayName("Location COD")]
         public string LocationId { get; set; }
 
         [DisplayName("Location Name")]

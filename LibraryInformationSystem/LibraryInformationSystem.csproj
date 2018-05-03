@@ -248,6 +248,7 @@
     <Content Include="Views\Home\_LayoutHome.cshtml" />
     <Content Include="Views\Books\_LayoutBooks.cshtml" />
     <Content Include="Views\Borrowers\_LayoutBorrower.cshtml" />
+    <Content Include="Views\Locations\_LayoutLocation.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201805021100259_CreateDatabase.resx">
