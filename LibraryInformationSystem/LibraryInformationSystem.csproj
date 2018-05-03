@@ -249,6 +249,11 @@
     <Content Include="Views\Books\_LayoutBooks.cshtml" />
     <Content Include="Views\Borrowers\_LayoutBorrower.cshtml" />
     <Content Include="Views\Locations\_LayoutLocation.cshtml" />
+    <Content Include="Views\Locations\_Details.cshtml" />
+    <Content Include="Views\Authors\_LayoutAuthors.cshtml" />
+    <Content Include="Views\Authors\_Details.cshtml" />
+    <Content Include="Views\Publishers\_LayoutPublishers.cshtml" />
+    <Content Include="Views\Publishers\_Details.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201805021100259_CreateDatabase.resx">
